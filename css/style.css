@@ -1,0 +1,36 @@
+* {
+  background: #051d3b;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  margin-left: 32px;
+}
+.header__busca {
+  background: yellow;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  width: 752px;
+  height: 56px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 32px;
+}
+.header__campoUx {
+  display: flex;
+}
+.header__campoUx__nomeUx {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+.header__campoUx__fotoUx {
+  width: 32px;
+  height: 32px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,54 @@
+@function calculateRem($size){
+    @return $size / 16px * 1rem;
+
+}
+
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: calculateRem($size) ;
+    
+}
+
+* {
+    background: rgba(5, 29, 59, 1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__logo {
+        margin-left: 32px;
+
+    }
+    &__busca {
+        background: yellow;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.16);
+        width: 752px;
+        height: 56px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 32px;
+
+
+
+    }
+    &__campoUx {
+        display: flex;
+
+        &__nomeUx {
+            font-size:calculateRem(16px) ;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+    
+        }
+        &__fotoUx {
+            width: 32px;
+            height: 32px;
+            
+        }
+    }
+    
+}
