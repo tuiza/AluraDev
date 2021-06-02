@@ -15,40 +15,45 @@
 
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    
+    justify-content: space-between;
+    margin: 32px 32px 40px;
+    height: 56px;
+
     &__logo {
         margin-left: 32px;
-
     }
     &__busca {
+        
         background: yellow;
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.16);
-        width: 752px;
-        height: 56px;
+        width: calculateRem(744px);
+        height: 50px;
         font-size: 16px;
         line-height: 24px;
-        margin-top: 32px;
-
-
-
+        border-style: none;
+        
     }
     &__campoUx {
         display: flex;
-
-        &__nomeUx {
-            font-size:calculateRem(16px) ;
-            font-weight: 400;
-            color: rgba(255, 255, 255, 1);
-    
-        }
+        width:100px;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: calculateRem(32px);
         &__fotoUx {
             width: 32px;
-            height: 32px;
-            
+            height: 32px; 
+        }
+        &__nomeUx {
+            position:absolute;
+            top:0;
+            font-size:calculateRem(16px);
+            font-weight: 400;
+            color: #ffffff;
         }
     }
+    
+    
     
 }

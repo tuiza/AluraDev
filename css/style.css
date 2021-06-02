@@ -4,8 +4,10 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin: 32px 32px 40px;
+  height: 56px;
 }
 .header__logo {
   margin-left: 32px;
@@ -14,23 +16,29 @@
   background: yellow;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.16);
-  width: 752px;
-  height: 56px;
+  width: 46.5rem;
+  height: 50px;
   font-size: 16px;
   line-height: 24px;
-  margin-top: 32px;
+  border-style: none;
 }
 .header__campoUx {
   display: flex;
-}
-.header__campoUx__nomeUx {
-  font-size: 1rem;
-  font-weight: 400;
-  color: white;
+  width: 100px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
 }
 .header__campoUx__fotoUx {
   width: 32px;
   height: 32px;
+}
+.header__campoUx__nomeUx {
+  position: absolute;
+  top: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
