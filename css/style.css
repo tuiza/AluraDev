@@ -2,6 +2,127 @@
   background: #051d3b;
 }
 
+.corpo__menu__links__img_desativado, .corpo__menu__links__img_ativado {
+  height: 16px;
+  width: 20px;
+  border-radius: 16px;
+  padding: 16px 14px;
+}
+
+.corpo__projeto__titulo, .corpo__menu__titulo {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  line-height: 18px;
+  font-size: 18px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.header__busca, .corpo__projeto__select, .corpo__projeto__descricao, .corpo__projeto__nome {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 16px;
+  line-height: 24px;
+  border-style: none;
+}
+
+.corpo {
+  display: flex;
+  margin: 49.95px 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.corpo__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.corpo__menu__links {
+  display: flex;
+  line-height: 24px;
+  align-items: center;
+  margin-top: 16px;
+}
+.corpo__menu__links__img_ativado {
+  /* vai ter js */
+  background: #5081FB;
+}
+.corpo__menu__links__img_desativado {
+  background: rgba(80, 129, 251, 0.16);
+  opacity: 50%;
+}
+.corpo__menu__links__a_ativado {
+  color: #ffffff;
+  margin-left: 16px;
+}
+.corpo__menu__links__a_desativado {
+  color: rgba(255, 255, 255, 0.356);
+  margin-left: 16px;
+}
+.corpo__codigo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.corpo__codigo__editor {
+  border-radius: 8px;
+  padding-top: 10px;
+  background: #6BD1FF;
+  width: 46.5rem;
+  height: 22.875rem;
+  flex-grow: 1;
+}
+.corpo__codigo__btn {
+  width: 46.5rem;
+  height: 50px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: rgba(80, 128, 251, 0.267);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  margin-top: 32px;
+  border-style: none;
+}
+.corpo__projeto {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.corpo__projeto__nome {
+  width: 17rem;
+  height: 56px;
+  margin-bottom: 16px;
+}
+.corpo__projeto__descricao {
+  width: 17rem;
+  height: 80px;
+  margin-bottom: 40px;
+}
+.corpo__projeto__select {
+  margin-bottom: 16px;
+  height: 56px;
+  color: #ffffff;
+}
+.corpo__projeto__cor {
+  background: rgba(196, 196, 196, 0.01);
+  border: 1px solid #FFFFFF;
+  width: 17rem;
+  height: 56px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.corpo__projeto__btn {
+  width: 17rem;
+  height: 50px;
+  border-radius: 8px;
+  color: #000000;
+  background: #5081FB;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -10,35 +131,27 @@
   height: 56px;
 }
 .header__logo {
-  margin-left: 32px;
+  margin-right: 70px;
 }
 .header__busca {
-  background: yellow;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.16);
   width: 46.5rem;
   height: 50px;
-  font-size: 16px;
-  line-height: 24px;
-  border-style: none;
+  display: flex;
+  flex-direction: column;
 }
 .header__campoUx {
   display: flex;
-  width: 100px;
-  justify-content: space-between;
+  width: 17rem;
+  justify-content: flex-end;
   align-items: center;
-  margin-right: 2rem;
 }
 .header__campoUx__fotoUx {
   width: 32px;
   height: 32px;
 }
 .header__campoUx__nomeUx {
-  position: absolute;
-  top: 0;
-  font-size: 1rem;
-  font-weight: 400;
   color: #ffffff;
+  margin-left: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

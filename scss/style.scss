@@ -9,9 +9,38 @@
     
 }
 
+
 * {
     background: rgba(5, 29, 59, 1);
 }
+
+%menu-fundo {
+    height: 16px;
+    width: 20px;
+    border-radius: 16px;
+    padding: 16px 14px ;
+}
+
+%estilo-titulos {
+ 
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    line-height: 18px;
+    font-size: 18px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+%estilo-inputs {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 16px;
+    line-height: 24px;
+    border-style: none;
+}
+
+@import 'corpo';
 
 .header {
     display: flex;
@@ -21,39 +50,41 @@
     height: 56px;
 
     &__logo {
-        margin-left: 32px;
+       margin-right: 70px;
+
     }
     &__busca {
-        
-        background: yellow;
-        border-radius: 8px;
-        background: rgba(255, 255, 255, 0.16);
+        @extend %estilo-inputs;
         width: calculateRem(744px);
         height: 50px;
-        font-size: 16px;
-        line-height: 24px;
-        border-style: none;
+        display: flex;
+        flex-direction: column;
+        
+       
         
     }
     &__campoUx {
         display: flex;
-        width:100px;
-        justify-content: space-between;
+         width: calculateRem(272px);
+        justify-content: flex-end ;
         align-items: center;
-        margin-right: calculateRem(32px);
+       
+
         &__fotoUx {
             width: 32px;
             height: 32px; 
         }
+        
         &__nomeUx {
-            position:absolute;
-            top:0;
-            font-size:calculateRem(16px);
-            font-weight: 400;
             color: #ffffff;
+            margin-left: 16px;
         }
     }
-    
-    
-    
 }
+
+
+
+    
+    
+    
+

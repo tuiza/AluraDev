@@ -7,6 +7,8 @@
     <title>Alura Dev</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class= "header">
@@ -14,11 +16,45 @@
         <input type= "text" class="header__busca" placeholder="Busque por algo">
         <div class="header__campoUx">
         <img src="img/Header/fotoUx.svg" class="header__campoUx__fotoUx"> 
-        <h3 class= "header__campoUX__nomeUx">Luiza</h3>
+        <h3 class= "header__campoUx__nomeUx">Luiza</h3>
         </div>  
-       
-
+    
     </header>
+    <main class="corpo">
+        <div class="corpo__menu">
+            <h3 class="corpo__menu__titulo">menu</h3>
+            <div class="corpo__menu__links">
+                <img class="corpo__menu__links__img_ativado" class="corpo__menu__links__img" src="img/corpo/codigo.svg"> 
+                <h3 class="corpo__menu__links__a_ativado">Editor de código</h3>
+            </div>
+            <div class="corpo__menu__links">
+                <img width="20px" height="16px" class="corpo__menu__links__img_desativado" src="img/corpo/comunidade.svg"> 
+                <h3 class="corpo__menu__links__a_desativado">Comunidade</h3>
+            </div>
+        
+        </div>
+        <div class="corpo__codigo">
+            <img src="img/corpo/teste.svg" class="corpo__codigo__editor" alt="">
+
+            <button class="corpo__codigo__btn">Visualizar com o highligth</button>
+        </div>
+        <div class="corpo__projeto">
+            <h3 class="corpo__projeto__titulo">seu projeto</h3>  
+            <input class="corpo__projeto__nome" placeholder="Nome do seu projeto">
+            <input class="corpo__projeto__descricao" placeholder="Descrição do seu projeto">
+            <h3 class="corpo__projeto__titulo">Personalização</h3>  
+            <select name="select" class="corpo__projeto__select">
+                <option value="Java Script">Java Script</option>
+                <option value="Css" selected>Css</option>
+                <option value="Html">Html</option>
+            </select>
+            <input class="corpo__projeto__cor" type="color">
+            <button class="corpo__projeto__btn" >Salvar projeto</button>
+                
+        </div>
+       
+        
+    </main>
     
 </body>
 </html>
