@@ -1,57 +1,52 @@
+
 .corpo {
     display: flex;
     margin: 49.95px 32px;
     align-items: flex-start;
     justify-content: space-between;
     
-   
     &__menu {
         display: flex;
         flex-direction: column;
-        
         justify-content: space-between;
-        
-       
-        
+
         &__titulo {
             
             @extend %estilo-titulos;
 
         }
         &__links {
-            display: flex;
-            line-height: 24px;
-            align-items: center;
-            margin-top: 16px;           
-        
-
-           
-            &__img_ativado { /* vai ter js */
-                @extend %menu-fundo;
-                background: #5081FB;
-                
-            }
-
-            &__img_desativado {
-                @extend %menu-fundo;
-                background: rgba(80, 129, 251, 0.16);
-                opacity: 50%;
-               
-               
-            }
-
-            &__a_ativado {
-                color: #ffffff;
-                margin-left: 16px;
-            }
-            &__a_desativado {
-                color: rgba(255, 255, 255, 0.356);
-                margin-left: 16px;
-            }
+            margin-top: 16px;
             
-          }
+            &__a {
+                display: flex;
+                align-items: center;
+                color: #FFFFFF;
+                opacity: 0.56;
+                text-decoration: none;
+
+                &__img {
+                    @extend %menu-fundo;
+                    background: rgba(80, 129, 251, 0.16);
+                    margin-right: 10px;
+                     
+                }
             }
 
+            &:hover {  /* pensar em um jeito pra colocar na BEM */
+                .corpo__menu__links__a__img {
+                    background: rgba(80, 129, 251, 0.64);
+                }
+                .corpo__menu__links__a {
+                color: #FFFFFF;
+                opacity: 0.72;
+                }
+            }
+                
+           
+            
+        }
+    }
     &__codigo {
         display: flex;
         flex-direction: column;
@@ -124,9 +119,17 @@
             font-family: 'Inter', sans-serif;
             font-weight: bold ;
             font-size: 16px;
-
-            
-           
         }
     }
-}
+    }
+
+    /* página corrente com css GAMBIARRA*/
+    body#editor a#editor, body#comunidade a#comunidade {
+        color: #ffffff;
+        opacity: 1;    
+       .corpo__menu__links__a__img {
+            background: #5081FB;
+       }
+    }
+    
+ 

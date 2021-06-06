@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="editor">
     <header class= "header">
         <img src= "/img/Header/Logo.svg" alt="logo da alura dev" class= "header__logo">
         <input type= "text" class="header__busca" placeholder="Busque por algo">
@@ -24,14 +24,17 @@
         <div class="corpo__menu">
             <h3 class="corpo__menu__titulo">menu</h3>
             <div class="corpo__menu__links">
-                <img class="corpo__menu__links__img_ativado" class="corpo__menu__links__img" src="img/corpo/codigo.svg"> 
-                <h3 class="corpo__menu__links__a_ativado">Editor de código</h3>
+                <a href="index.html" class="corpo__menu__links__a" id="editor"> 
+                    <img class="corpo__menu__links__a__img" src="img/corpo/codigo.svg"> 
+                    Editor de código
+                </a>
             </div>
             <div class="corpo__menu__links">
-                <img width="20px" height="16px" class="corpo__menu__links__img_desativado" src="img/corpo/comunidade.svg"> 
-                <h3 class="corpo__menu__links__a_desativado">Comunidade</h3>
+                <a href="comunidade.html" class="corpo__menu__links__a" name="teste">
+                    <img width="20px" height="16px" class="corpo__menu__links__a__img" src="img/corpo/comunidade.svg" name="teste"> 
+                    Comunidade
+                </a>
             </div>
-        
         </div>
         <div class="corpo__codigo">
             <img src="img/corpo/teste.svg" class="corpo__codigo__editor" alt="">
@@ -52,9 +55,10 @@
             <button class="corpo__projeto__btn" >Salvar projeto</button>
                 
         </div>
-       
-        
     </main>
-    
 </body>
+<script src="menu.js"></script>
 </html>
+
+
+   

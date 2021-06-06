@@ -1,8 +1,9 @@
+@charset "UTF-8";
 * {
   background: #051d3b;
 }
 
-.corpo__menu__links__img_desativado, .corpo__menu__links__img_ativado {
+.corpo__menu__links__a__img {
   height: 16px;
   width: 20px;
   border-radius: 16px;
@@ -39,26 +40,28 @@
   justify-content: space-between;
 }
 .corpo__menu__links {
-  display: flex;
-  line-height: 24px;
-  align-items: center;
   margin-top: 16px;
 }
-.corpo__menu__links__img_ativado {
-  /* vai ter js */
-  background: #5081FB;
+.corpo__menu__links__a {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  opacity: 0.56;
+  text-decoration: none;
 }
-.corpo__menu__links__img_desativado {
+.corpo__menu__links__a__img {
   background: rgba(80, 129, 251, 0.16);
-  opacity: 50%;
+  margin-right: 10px;
 }
-.corpo__menu__links__a_ativado {
-  color: #ffffff;
-  margin-left: 16px;
+.corpo__menu__links:hover {
+  /* pensar em um jeito pra colocar na BEM */
 }
-.corpo__menu__links__a_desativado {
-  color: rgba(255, 255, 255, 0.356);
-  margin-left: 16px;
+.corpo__menu__links:hover .corpo__menu__links__a__img {
+  background: rgba(80, 129, 251, 0.64);
+}
+.corpo__menu__links:hover .corpo__menu__links__a {
+  color: #FFFFFF;
+  opacity: 0.72;
 }
 .corpo__codigo {
   display: flex;
@@ -121,6 +124,15 @@
   font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 16px;
+}
+
+/* página corrente com css GAMBIARRA*/
+body#editor a#editor, body#comunidade a#comunidade {
+  color: #ffffff;
+  opacity: 1;
+}
+body#editor a#editor .corpo__menu__links__a__img, body#comunidade a#comunidade .corpo__menu__links__a__img {
+  background: #5081FB;
 }
 
 .header {
