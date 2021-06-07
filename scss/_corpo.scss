@@ -52,13 +52,26 @@
         flex-direction: column;
         align-items: flex-start;
         
+        
         &__editor {
             border-radius: 8px;
-            padding-top: 10px;
             background: #6BD1FF;
-            width: calculateRem(744px);
-            height: calculateRem(366px);
-            flex-grow: 1;
+            padding: 10px;
+            width: 100%;
+            max-width:calculateRem(724px); /* 744 - 10px(direita) - 10px(esquerda) */
+            height: 100%;
+            margin-bottom: 32px;
+        }
+        .preview {
+            display: block;
+            padding: 10px;
+            border-radius: 7px;
+            height: 100%;
+            background: #141414;
+            white-space: pre-wrap;
+            word-break: keep-all;
+            overflow: auto;
+           
         }
         &__btn {
             width: calculateRem(744px);
@@ -96,10 +109,13 @@
         }
         &__select {
             @extend %estilo-inputs;
-            margin-bottom: 16px;
             height:56px;
-            color: #ffffff;
+            margin-bottom: 24px;
             
+            &:focus {
+                background: royalblue;
+            }
+           
         }
         &__cor {
             background: rgba(196, 196, 196, 0.01);
@@ -119,6 +135,12 @@
             font-family: 'Inter', sans-serif;
             font-weight: bold ;
             font-size: 16px;
+          
+
+            &:hover {
+               transform: 300ms;
+               background: #96B9FD;
+            }
         }
     }
     }
@@ -131,5 +153,7 @@
             background: #5081FB;
        }
     }
+
+    
     
  

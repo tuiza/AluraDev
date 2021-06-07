@@ -10,7 +10,7 @@
 }
 
 
-* {
+.body {
     background: rgba(5, 29, 59, 1);
 }
 
@@ -35,52 +35,24 @@
 %estilo-inputs {
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.16);
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
     border-style: none;
-}
-
-@import 'corpo';
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 32px 32px 40px;
-    height: 56px;
-
-    &__logo {
-       margin-right: 70px;
-
+    padding-left: 10px;
+    color: #ffffff;
+    
+  
+    &:hover {
+        background: rgba(255, 255, 255, 0.24);
     }
-    &__busca {
-        @extend %estilo-inputs;
-        width: calculateRem(744px);
-        height: 50px;
-        display: flex;
-        flex-direction: column;
-        
-       
-        
+    &:focus {
+        background: rgba(255, 255, 255, 0.24);
     }
-    &__campoUx {
-        display: flex;
-         width: calculateRem(272px);
-        justify-content: flex-end ;
-        align-items: center;
-       
+    }
+    
 
-        &__fotoUx {
-            width: 32px;
-            height: 32px; 
-        }
-        
-        &__nomeUx {
-            color: #ffffff;
-            margin-left: 16px;
-        }
-    }
-}
+
+@import 'header','corpo';
 
 
 

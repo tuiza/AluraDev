@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Dev</title>
+    <link rel="stylesheet" href="css/dracula.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
-<body id="editor">
+<body class="body" id="editor">
     <header class= "header">
         <img src= "/img/Header/Logo.svg" alt="logo da alura dev" class= "header__logo">
         <input type= "text" class="header__busca" placeholder="Busque por algo">
@@ -37,8 +38,10 @@
             </div>
         </div>
         <div class="corpo__codigo">
-            <img src="img/corpo/teste.svg" class="corpo__codigo__editor" alt="">
-
+            <div class="corpo__codigo__editor">
+             <code class="preview hljs"  contenteditable="true" aria-label="editor">
+             </code>
+            </div>
             <button class="corpo__codigo__btn">Visualizar com o highligth</button>
         </div>
         <div class="corpo__projeto">
@@ -47,17 +50,21 @@
             <input class="corpo__projeto__descricao" placeholder="Descrição do seu projeto">
             <h3 class="corpo__projeto__titulo">Personalização</h3>  
             <select name="select" class="corpo__projeto__select">
-                <option value="Java Script">Java Script</option>
+                <option  value="Java Script">Java Script</option>
                 <option value="Css" selected>Css</option>
-                <option value="Html">Html</option>
+                <option  value="Html">Html</option>
             </select>
             <input class="corpo__projeto__cor" type="color">
             <button class="corpo__projeto__btn" >Salvar projeto</button>
+
                 
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+        <script src="index.js"></script>
+        
     </main>
 </body>
-<script src="menu.js"></script>
+
 </html>
 
 

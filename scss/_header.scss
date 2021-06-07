@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px 32px 40px;
+    height: 56px;
+
+    &__logo {
+       margin-right: 70px;
+
+    }
+    &__busca {
+        @extend %estilo-inputs;
+        width: calculateRem(744px);
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        
+       
+        
+    }
+    &__campoUx {
+        display: flex;
+         width: calculateRem(272px);
+        justify-content: flex-end ;
+        align-items: center;
+       
+
+        &__fotoUx {
+            width: 32px;
+            height: 32px; 
+        }
+        
+        &__nomeUx {
+            color: #ffffff;
+            margin-left: 16px;
+        }
+    }
+}
+
