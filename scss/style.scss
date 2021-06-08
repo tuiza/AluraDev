@@ -9,6 +9,12 @@
     
 }
 
+%tira-borda {
+    /* tira a borda branca padrão dos inpts */
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
 
 .body {
     background: rgba(5, 29, 59, 1);
@@ -40,18 +46,13 @@
     border-style: none;
     padding-left: 10px;
     color: #ffffff;
-    
-  
-    &:hover {
-        background: rgba(255, 255, 255, 0.24);
-    }
-    &:focus {
-        background: rgba(255, 255, 255, 0.24);
-    }
-    }
-    
 
-
+    &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.24);
+        @extend %tira-borda;
+        
+    }
+    }
 @import 'header','corpo';
 
 

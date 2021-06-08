@@ -16,3 +16,13 @@ function mudaLinguagem () {
         hljs.highlightBlock(codigo);
         
     })
+
+const cor = document.querySelector('.corpo__projeto__cor');
+
+cor.addEventListener('change', () => {
+    const valor = cor.value;
+    console.log(valor);
+    areaDoCodigo.style.backgroundColor = valor;
+})
+
+

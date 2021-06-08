@@ -15,20 +15,38 @@
         height: 50px;
         display: flex;
         flex-direction: column;
+        border-style: none;
         
        
         
     }
     &__campoUx {
         display: flex;
-         width: calculateRem(272px);
+        width: calculateRem(272px);
         justify-content: flex-end ;
         align-items: center;
+       
+
+        &__caixinha { /* crie para colocar um background só na foto e no nome */
+            display: flex;
+            align-items: center;
+            padding: 10px 10px;
+
+            &:hover {
+                padding: 10px 10px;
+                background-size:contain;
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 8px;
+        }
+        }
+
+    
        
 
         &__fotoUx {
             width: 32px;
             height: 32px; 
+            
         }
         
         &__nomeUx {

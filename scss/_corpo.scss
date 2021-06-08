@@ -55,10 +55,10 @@
         
         &__editor {
             border-radius: 8px;
-            background: #6BD1FF;
+            background-color: #6BD1FF;
             padding: 10px;
             width: 100%;
-            max-width:calculateRem(724px); /* 744 - 10px(direita) - 10px(esquerda) */
+            max-width:calculateRem(734px); /* 744 - 10px(direita) - 10px(esquerda) */
             height: 100%;
             margin-bottom: 32px;
         }
@@ -71,6 +71,7 @@
             white-space: pre-wrap;
             word-break: keep-all;
             overflow: auto;
+            @extend %tira-borda;
            
         }
         &__btn {
@@ -78,11 +79,22 @@
             height: 50px;
             border-radius: 8px;
             color: #ffffff;
-            background:  rgba(80, 128, 251, 0.267);
+            background:rgba(80, 129, 251, 0.08);
             font-family: 'Inter', sans-serif;
             font-size: 16px;
             margin-top: 32px;
             border-style: none;
+
+            &:hover{
+                background: rgba(80, 129, 251, 0.16);
+            }
+
+            &:active {
+                background: rgba(80, 129, 251, 0.16);
+                border: 4px solid rgba(80, 129, 251, 0.24);
+                border-radius: 8px;
+            }
+           
         }
     }
 
@@ -111,10 +123,16 @@
             @extend %estilo-inputs;
             height:56px;
             margin-bottom: 24px;
-            
-            &:focus {
-                background: royalblue;
+
+            option {
+                border-radius: 8px;
+                background-color: #812828;
+                color: #ffffff;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.24);
+                }
             }
+            
            
         }
         &__cor {
@@ -131,16 +149,26 @@
             height: 50px;
             border-radius: 8px;
             color: #000000;
-            background: #5081FB;
+            background-color: #5081FB;
             font-family: 'Inter', sans-serif;
             font-weight: bold ;
             font-size: 16px;
-          
+            text-decoration: none;
+            outline: none;
+            border:none;
+           
 
             &:hover {
-               transform: 300ms;
-               background: #96B9FD;
+                background-color: #7BA4FC;
             }
+           
+            &:active {
+                background-color: #7BA4FC;
+                border: 4px solid rgba(80, 129, 251, 0.72);
+               
+            }
+            
+            
         }
     }
     }
