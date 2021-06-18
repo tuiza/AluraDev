@@ -3,7 +3,7 @@ const linguagem = document.querySelector('.corpo__projeto__select');
 const cor = document.querySelector('.corpo__projeto__cor');
 const botaoPreview = document.querySelector('.corpo__codigo__btn');
 const botaoSalvar = document.querySelector('.corpo__projeto__btn');
-const tituloProjeto = document.querySelector('.corpo__projeto__titulo');
+const tituloProjeto = document.querySelector('.corpo__projeto__nome');
 const descricaoProjeto = document.querySelector('.corpo__projeto__descricao');
 
 function mudaLinguagem () {

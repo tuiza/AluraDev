@@ -24,6 +24,8 @@
         justify-content: flex-end ;
         align-items: center;
         width: 18%;
+
+        
        
 
         &__caixinha { /* crie para colocar um background só na foto e no nome */
@@ -37,6 +39,10 @@
                 background-size:contain;
                 background: rgba(255, 255, 255, 0.08);
                 border-radius: 8px;
+
+                &.publico {
+                    border-radius: 16px;
+                }
         }
         }
 

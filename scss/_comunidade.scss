@@ -16,6 +16,17 @@
         overflow: hidden;
         white-space: pre-wrap;
         margin-bottom: 24px;
+        background: rgba(0, 0, 0, 0.16);
+
+        &:hover {
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 32px 32px 24px;
+
+            }
+        }
        
        
         &:nth-child(2n-1) {
@@ -31,15 +42,32 @@
            
         }
         &__nome {
-            color: cyan;
+            color: #ffffff;
+            size: bold;
             margin-bottom: 8px;
+            margin-left: 24px;
+            
         }
         &__descricao {
-            background: darkblue;
+            color: #ffffff80;
+            
             margin-bottom:35.25px; 
+            margin-left: 24px;
         }
 
-        
+        &__info {
+            display: none;
+            &__publico {
+                display: flex;
+                justify-content: space-between;
+                &__btns {
+                    display: flex;
+                    background: transparent; 
+                    border-style: none;
+
+                }
+            }
+            }
     }
 }
-    
+
