@@ -1,0 +1,45 @@
+.corpo__comunidade {
+    display: flex;
+    width: 79%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+    &__projeto {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        justify-content: flex-start;
+        text-decoration: none;
+        box-sizing: border-box;
+        word-break: keep-all;
+        overflow: hidden;
+        white-space: pre-wrap;
+        margin-bottom: 24px;
+       
+       
+        &:nth-child(2n-1) {
+            margin-right: 24px;
+        }
+
+        &__codigo{
+            display: block;
+            height: 288px;
+            border: 24px solid;
+            border-radius: 10px;
+            margin-bottom: 24px;
+           
+        }
+        &__nome {
+            color: cyan;
+            margin-bottom: 8px;
+        }
+        &__descricao {
+            background: darkblue;
+            margin-bottom:35.25px; 
+        }
+
+        
+    }
+}
+    

@@ -4,11 +4,13 @@
     margin: 49.95px 32px;
     align-items: flex-start;
     justify-content: space-between;
+    @extend %tamanho-pag;
     
     &__menu {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 13% ;
 
         &__titulo {
             
@@ -43,45 +45,45 @@
                 }
             }
                 
-           
-            
         }
     }
     &__codigo {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        width: 52%;
         
         
         &__editor {
             border-radius: 8px;
             background-color: #6BD1FF;
-            padding: 10px;
-            width: 100%;
-            max-width:calculateRem(734px); /* 744 - 10px(direita) - 10px(esquerda) */
-            height: 100%;
+            padding: 10px; 
+            width: 100%; 
+            box-sizing: border-box;
             margin-bottom: 32px;
+            
         }
         .preview {
+            
             display: block;
             padding: 10px;
             border-radius: 7px;
             height: 100%;
             background: #141414;
-            white-space: pre-wrap;
             word-break: keep-all;
             overflow: auto;
+            white-space: pre-wrap;
             @extend %tira-borda;
            
         }
         &__btn {
-            width: calculateRem(744px);
+            @extend %todo-width;
             height: 50px;
             border-radius: 8px;
             color: #ffffff;
             background:rgba(80, 129, 251, 0.08);
             font-family: 'Inter', sans-serif;
-            font-size: 16px;
+            font-size: 1rem;
             margin-top: 32px;
             border-style: none;
 
@@ -102,21 +104,23 @@
         display: flex;
         flex-direction: column;
         border-radius: 8px;
+        width: 18% ;
         
         &__titulo {
             @extend %estilo-titulos;
         }
         &__nome {
             @extend %estilo-inputs;
-            width: calculateRem(272px);
+            
             height:56px;
             margin-bottom: 16px;
         }
         &__descricao {
             @extend %estilo-inputs;
-            width: calculateRem(272px);
             height:80px;
             margin-bottom: 40px;
+            resize: none; /* pra n deixar alterar o tamanho do ladinho */
+            overflow: hidden; /* a barra de scroll */
             
         }
         &__select {
@@ -138,14 +142,14 @@
         &__cor {
             background: rgba(196, 196, 196, 0.01);
             border: 1px solid #FFFFFF;
-            width: calculateRem(272px);
+            @extend %todo-width;
             height: 56px;
             border-radius: 8px;
             margin-bottom: 32px;
         }
         
         &__btn {
-            width: calculateRem(272px);
+            @extend %todo-width;
             height: 50px;
             border-radius: 8px;
             color: #000000;

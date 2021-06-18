@@ -53,7 +53,15 @@
         
     }
     }
-@import 'header','corpo';
+
+ %tamanho-pag {
+     width: 95vw;
+ }   
+ 
+ %todo-width {
+     width: 100%;
+ }
+@import 'header','editor','comunidade';
 
 
 

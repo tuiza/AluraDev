@@ -40,6 +40,14 @@
   background: rgba(255, 255, 255, 0.24);
 }
 
+.corpo, .header {
+  width: 95vw;
+}
+
+.corpo__projeto__btn, .corpo__projeto__cor, .corpo__codigo__btn {
+  width: 100%;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -48,10 +56,10 @@
   height: 56px;
 }
 .header__logo {
-  margin-right: 70px;
+  width: 13%;
 }
 .header__busca {
-  width: 46.5rem;
+  width: 52%;
   height: 50px;
   display: flex;
   flex-direction: column;
@@ -59,9 +67,9 @@
 }
 .header__campoUx {
   display: flex;
-  width: 17rem;
   justify-content: flex-end;
   align-items: center;
+  width: 18%;
 }
 .header__campoUx__caixinha {
   /* crie para colocar um background só na foto e no nome */
@@ -94,6 +102,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 13%;
 }
 .corpo__menu__links {
   margin-top: 16px;
@@ -122,16 +131,15 @@
 .corpo__codigo {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  width: 52%;
 }
 .corpo__codigo__editor {
   border-radius: 8px;
   background-color: #6BD1FF;
   padding: 10px;
   width: 100%;
-  max-width: 45.875rem;
-  /* 744 - 10px(direita) - 10px(esquerda) */
-  height: 100%;
+  box-sizing: border-box;
   margin-bottom: 32px;
 }
 .corpo__codigo .preview {
@@ -140,18 +148,17 @@
   border-radius: 7px;
   height: 100%;
   background: #141414;
-  white-space: pre-wrap;
   word-break: keep-all;
   overflow: auto;
+  white-space: pre-wrap;
 }
 .corpo__codigo__btn {
-  width: 46.5rem;
   height: 50px;
   border-radius: 8px;
   color: #ffffff;
   background: rgba(80, 129, 251, 0.08);
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 32px;
   border-style: none;
 }
@@ -167,16 +174,19 @@
   display: flex;
   flex-direction: column;
   border-radius: 8px;
+  width: 18%;
 }
 .corpo__projeto__nome {
-  width: 17rem;
   height: 56px;
   margin-bottom: 16px;
 }
 .corpo__projeto__descricao {
-  width: 17rem;
   height: 80px;
   margin-bottom: 40px;
+  resize: none;
+  /* pra n deixar alterar o tamanho do ladinho */
+  overflow: hidden;
+  /* a barra de scroll */
 }
 .corpo__projeto__select {
   height: 56px;
@@ -193,13 +203,11 @@
 .corpo__projeto__cor {
   background: rgba(196, 196, 196, 0.01);
   border: 1px solid #FFFFFF;
-  width: 17rem;
   height: 56px;
   border-radius: 8px;
   margin-bottom: 32px;
 }
 .corpo__projeto__btn {
-  width: 17rem;
   height: 50px;
   border-radius: 8px;
   color: #000000;
@@ -226,6 +234,43 @@ body#editor a#editor, body#comunidade a#comunidade {
 }
 body#editor a#editor .corpo__menu__links__a__img, body#comunidade a#comunidade .corpo__menu__links__a__img {
   background: #5081FB;
+}
+
+.corpo__comunidade {
+  display: flex;
+  width: 79%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.corpo__comunidade__projeto {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  justify-content: flex-start;
+  text-decoration: none;
+  box-sizing: border-box;
+  word-break: keep-all;
+  overflow: hidden;
+  white-space: pre-wrap;
+  margin-bottom: 24px;
+}
+.corpo__comunidade__projeto:nth-child(2n-1) {
+  margin-right: 24px;
+}
+.corpo__comunidade__projeto__codigo {
+  display: block;
+  height: 288px;
+  border: 24px solid;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+.corpo__comunidade__projeto__nome {
+  color: cyan;
+  margin-bottom: 8px;
+}
+.corpo__comunidade__projeto__descricao {
+  background: darkblue;
+  margin-bottom: 35.25px;
 }
 
 /*# sourceMappingURL=style.css.map */

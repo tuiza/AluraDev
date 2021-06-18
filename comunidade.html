@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/dracula.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>Comunidade</title>
 </head>
 <body class="body" id="comunidade">
     <header class= "header">
-        <img src= "/img/Header/Logo.svg" alt="logo da alura dev" class= "header__logo">
+        <div class="header__logo">
+            <img src= "/img/Header/Logo.svg" alt="logo da alura dev" class= "header__logo__img">
+        </div>
         <input type= "text" class="header__busca" placeholder="Busque por algo">
         <div class="header__campoUx">
         <img src="img/Header/fotoUx.svg" class="header__campoUx__fotoUx"> 
@@ -34,10 +37,21 @@
                 Comunidade
             </a>
         </div>
-    
         </div>
+        <div class="corpo__comunidade todos-projetos js-todos-projetos">
+            
+        </div>
+        
     </main>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="js/comunidade.js"></script>
+    <script>
+        const todosOsCodigos = document.querySelectorAll('code')
+        todosOsCodigos.forEach(codigo => {
+            hljs.highlightBlock(codigo)
+        })
+    </script>
 </body>
 </html>
 

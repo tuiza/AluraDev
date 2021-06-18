@@ -13,7 +13,10 @@
 </head>
 <body class="body" id="editor">
     <header class= "header">
-        <img src= "/img/Header/Logo.svg" alt="logo da alura dev" class= "header__logo">
+        <div class="header__logo">
+            <img src= "/img/Header/Logo.svg" alt="logo da alura dev" class= "header__logo__img">
+        </div>
+        
         <input type= "text" class="header__busca" placeholder="Busque por algo">
         <div class="header__campoUx">
             <div class="header__campoUx__caixinha">
@@ -50,7 +53,7 @@
         <div class="corpo__projeto">
             <h3 class="corpo__projeto__titulo">seu projeto</h3>  
             <input class="corpo__projeto__nome" placeholder="Nome do seu projeto">
-            <input class="corpo__projeto__descricao" placeholder="Descrição do seu projeto">
+            <textarea cols="70" rows="10"  class="corpo__projeto__descricao" placeholder="Descrição do seu projeto"></textarea>
             <h3 class="corpo__projeto__titulo">Personalização</h3>  
             <select name="select" class="corpo__projeto__select">
                 <option  value="Java Script">Java Script</option>
@@ -63,7 +66,8 @@
                 
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-        <script src="index.js"></script>
+        <script src="js/index.js"></script>
+        
         
     </main>
 </body>
