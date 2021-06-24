@@ -1,14 +1,22 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 32px 32px 40px;
-    height: 56px;
-    @extend %tamanho-pag;
-
     
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 32px 32px 40px;
+        height: 56px;
+        width: 95vw;
+        
+
     &__logo {
        width: 13%;
+       @include for-phone-only() {
+        width: 25%;
+       }
+       @include for-tablet-only() {
+        width: 10%;
+       }
+
     }
     &__busca {
         @extend %estilo-inputs;
@@ -17,18 +25,65 @@
         display: flex;
         flex-direction: column;
         border-style: none;
+        @include for-phone-only() {
+            display: none;
+        }
+        @include for-tablet-only () {
+            width:56%;
+        }
+    }
 
+    &.pesquisar &__pesquisar-btn {
+        display: flex;
+    }
+    &.pesquisar &__busca {
+        display: flex;
+        width: 75%;
+    }
+    &.pesquisar &__logo {
+        display: none;
+    }
+
+
+    &__pesquisar-btn {
+        display: none;
+        @include for-phone-only() {
+            display: flex;
+            position: absolute;
+            left: 85%;
+            border-color:transparent;
+            background-color: transparent;
+          
+        }
+        
+    }
+    &.active &__menu {  /* se a classe active tiver on faz isso no menu */ 
+        display: block;
+        height: calc(100vh - 80px);
+        visibility: visible;
+        overflow-y: auto; /* pra qnd passar do tam da tela, ter o scroll */ 
+    }
+    &.active &__menu-hamburger__icone {
+        border-top-color:transparent;
+
+        &::before {
+            transform: rotate(135deg);
+        }
+        &::after {
+            transform: rotate(-135deg);
+            top: -7px;
+        }
     }
     &__campoUx {
+        display: none;
+
+        @include for-desktop-only() {
         display: flex;
         justify-content: flex-end ;
         align-items: center;
         width: 18%;
-
-        
-       
-
-        &__caixinha { /* crie para colocar um background só na foto e no nome */
+    }
+        &__conteiner {/* crie para colocar um background só na foto e no nome */
             display: flex;
             align-items: center;
             padding: 10px 10px;
@@ -56,6 +111,61 @@
             color: #ffffff;
             margin-left: 16px;
         }
+    }
+
+    &__menu-hamburger { /* btn */
+
+        @include for-desktop-only() {
+            display: none;
+        }
+
+            display: flex; /* pras barrinhas ficarem do lado do btn */
+            padding: .5rem 1rem;
+            font-size: 1rem;
+            border:none;
+            background: none;
+            cursor: pointer;
+            gap: .5rem;
+            align-items: center;
+            
+            
+            &__icone {
+                border-top: 2px solid ;
+                width: 20px;
+                color:#ffffff;
+                /* fica distante .5rem do btn */
+
+                &::before, &::after {
+                    content:'';
+                    display: block; /* pra ficar uma barrinha em cada linha */
+                    width: 20px;
+                    height: 2px;
+                    background: currentColor;
+                    margin-top: 5px;
+                    transition: .3s;
+                    position: relative;
+                    
+                }   
+            }
+            
+    }
+    &__menu {
+
+        @include for-desktop-only() {
+            display: none;
+        }
+
+        position: absolute;
+        width:75%;
+        top:100px;  /*pra ficar embaixo*/
+        right: 0px;
+        background: #2D415B;
+        height: 0;
+        z-index: 1000;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+
     }
 }
 

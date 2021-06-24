@@ -30,14 +30,14 @@ function montaCartao(projeto) {
                 <p class="corpo__comunidade__projeto__descricao ">${projeto.detalhesDoProjeto.descricaoDoProjeto}</p>
                 <div class='corpo__comunidade__projeto__info info'>
                     <div class='corpo__comunidade__projeto__info__publico' >
-                        <div class='header__campoUx__caixinha publico'>
+                        <div class='header__campoUx__conteiner publico'>
                         <button class='corpo__comunidade__projeto__info__publico__btns comentário'><img src='img/comunidade/comentarios.svg'></button><h1>9</h1>
                         </div>
-                        <div class='header__campoUx__caixinha publico'>
+                        <div class='header__campoUx__conteiner publico'>
                         <button class='corpo__comunidade__projeto__info__publico__btns comentário'><img src='img/comunidade/curtidas.svg'></button><h1>9</h1>
                         </div>
                     </div>
-                    <div class="header__campoUx__caixinha">
+                    <div class="header__campoUx__conteiner">
                     <img src="img/Header/fotoUx.svg" class="header__campoUx__fotoUx"> 
                     <h3 class= "header__campoUx__nomeUx">Luiza</h3>
                     </div>

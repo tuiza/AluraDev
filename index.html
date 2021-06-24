@@ -16,18 +16,38 @@
         <div class="header__logo">
             <img src= "/img/Header/Logo.svg" alt="logo da alura dev" class= "header__logo__img">
         </div>
-        
         <input type= "text" class="header__busca" placeholder="Busque por algo">
         <div class="header__campoUx">
-            <div class="header__campoUx__caixinha">
+            <div class="header__campoUx__conteiner">
                 <img src="img/Header/fotoUx.svg" class="header__campoUx__fotoUx"> 
                 <h3 class= "header__campoUx__nomeUx">Luiza</h3>
             </div>
-        </div>  
+        </div>
+        <button id="pesquisar" class="header__pesquisar-btn" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="nav__menu" aria-expanded="false">
+        <img src="img/Header/lupa.svg">
+        </button>
+
+        <button id="menu_btn" class="header__menu-hamburger" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="nav__menu" aria-expanded="false">
+            <span class="header__menu-hamburger__icone"></span>
+        </button>
+        <div class="header__menu">
+            <div class="corpo__menu__links">
+                <a href="index.html" class="corpo__menu__links__a" id="editor"> 
+                    <img class="corpo__menu__links__a__img" src="img/editor/codigo.svg"> 
+                    Editor de código
+                </a>
+            </div>
+            <div class="corpo__menu__links">
+                <a href="comunidade.html" class="corpo__menu__links__a" name="teste">
+                    <img width="20px" height="16px" class="corpo__menu__links__a__img" src="img/editor/comunidade.svg" name="teste"> 
+                    Comunidade
+                </a>
+            </div>
+        </div>
     
     </header>
     <main class="corpo">
-        <div class="corpo__menu">
+        <div class="corpo__menu ">
             <h3 class="corpo__menu__titulo">menu</h3>
             <div class="corpo__menu__links">
                 <a href="index.html" class="corpo__menu__links__a" id="editor"> 
@@ -54,18 +74,23 @@
             <input class="corpo__projeto__nome" placeholder="Nome do seu projeto">
             <textarea cols="70" rows="10"  class="corpo__projeto__descricao" placeholder="Descrição do seu projeto"></textarea>
             <h3 class="corpo__projeto__titulo">Personalização</h3>  
-            <select name="select" class="corpo__projeto__select">
-                <option  value="javascript">Java Script</option>
-                <option value="Css" selected>Css</option>
-                <option  value="Html">Html</option>
-            </select>
-            <input class="corpo__projeto__cor" type="color" >
+            <div class="corpo__projeto__container">
+                <select name="select" class="corpo__projeto__container__select">
+                    <option  value="javascript">Java Script</option>
+                    <option value="Css" selected>Css</option>
+                    <option  value="Html">Html</option>
+                </select>
+                <input class="corpo__projeto__container__cor" type="color" >
+            </div>
+            
             <button class="corpo__projeto__btn" >Salvar projeto</button>
 
                 
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/menu-hamburger.js"></script>
+        <script src="js/pesquisar.js"></script>
         
         
     </main>

@@ -1,9 +1,11 @@
 .corpo__comunidade {
     display: flex;
-    width: 79%;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    @include for-desktop-only() {
+        width: 79%;
+    }
     
     &__projeto {
         display: flex;
@@ -18,7 +20,21 @@
         margin-bottom: 24px;
         background: rgba(0, 0, 0, 0.16);
 
-        &:hover {
+        @include for-desktop-only() {
+            
+            &:hover {
+                .info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0 32px 32px 24px;
+    
+                }
+            }
+        }
+
+        @include for-tablet-only() {
+            width: 100%;
             .info {
                 display: flex;
                 justify-content: space-between;
@@ -27,6 +43,18 @@
 
             }
         }
+        @include for-phone-only() {
+            width: 100%;
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0 32px 32px 24px;
+
+            }
+        }
+        
+    
        
        
         &:nth-child(2n-1) {

@@ -1,6 +1,6 @@
 const areaDoCodigo = document.querySelector('.corpo__codigo__editor');
-const linguagem = document.querySelector('.corpo__projeto__select');
-const cor = document.querySelector('.corpo__projeto__cor');
+const linguagem = document.querySelector('.corpo__projeto__container__select');
+const cor = document.querySelector('.corpo__projeto__container__cor');
 const botaoPreview = document.querySelector('.corpo__codigo__btn');
 const botaoSalvar = document.querySelector('.corpo__projeto__btn');
 const tituloProjeto = document.querySelector('.corpo__projeto__nome');
@@ -27,8 +27,7 @@ function mudaLinguagem () {
     console.log(valor);
     areaDoCodigo.style.backgroundColor = valor;
     return valor;
-    
-})
+    })
 
 botaoSalvar.addEventListener('click', ()=> {
     if(typeof(Storage) !== undefined) {
